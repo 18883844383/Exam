@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="Accordion1" class="Accordion" tabindex="0">
+  <div class="AccordionPanel">
+        <div class="AccordionPanelTab">管理学生</div>
+        <div class="AccordionPanelContent">
+        <ul>
+          <li><a href="addStudent.jsp" target="right">新增学生</a></li>
+          <li><a href="delStudent.jsp" target="right">删除学生</a></li>
+          <li><a href="updateStudent.jsp" target="right">修改学生信息</a></li>
+          <li><a href="searchStudent.jsp" target="right">查找学生</a></li>
+          </ul>
+      </div>
+    </div>
+      <div class="AccordionPanel">
+        <div class="AccordionPanelTab">管理老师</div>
+        <div class="AccordionPanelContent">
+        <ul>
+          <li><a href="addTeacher.jsp" target="right">新增老师</a></li>
+          <li><a href="delTeacher.jsp" target="right">删除老师</a></li>
+          <li><a href="updateTeacher.jsp" target="right">修改老师信息</a></li>
+          <li><a href="searchTeacher.jsp" target="right">查找老师</a></li>
+          </ul>
+        </div>
+    </div>
+            <div class="AccordionPanel">
+        <div class="AccordionPanelTab">管理班级</div>
+        <div class="AccordionPanelContent">
+         <ul>
+          <li><a href="addClass.jsp" target="right">新增班级</a></li>
+          <li><a href="delClass.jsp" target="right">删除班级</a></li>
+          <li><a href="updateClass.jsp" target="right">修改班级信息</a></li>
+          <li><a href="searchClass.jsp" target="right">查找班级</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="AccordionPanel">
+        <div class="AccordionPanelTab">管理科目</div>
+        <div class="AccordionPanelContent">
+           <ul>
+          <li><a href="addSubject.jsp" target="right">新增科目</a></li>
+          <li><a href="delSubject.jsp" target="right">删除科目</a></li>
+          <li><a href="updateSubject.jsp" target="right">修改科目信息</a></li>
+          <li><a href="searchSubject.jsp" target="right">查找科目</a></li>
+          </ul>
+        </div>
+        </div>
+</div>
+<script type="text/javascript">
+var Accordion1 = new Spry.Widget.Accordion("Accordion1");
+</script>
+</body>
+</html>

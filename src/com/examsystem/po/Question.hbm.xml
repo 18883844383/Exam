@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.examsystem.po.Question" table="question"><!-- 每个class对应一个持久化对象 -->
+		<id name="id" type="int"><!-- id元素用来定义主键标识,并指定主键生成策略 -->
+			<column name="id"></column>
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="title">
+		<column name="Titles"/>
+		</property><!-- 映射password属性 -->
+		
+		<property name="answer">
+		<column name="answer"/>
+		</property><!-- 映射password属性 -->
+
+		<property name="diffculty">
+		<column name="diffculty"/>
+		</property><!-- 映射password属性 -->
+		
+		<property name="objectId">
+		<column name="objectId"/>
+		</property><!-- 映射password属性 -->
+
+		<property name="testCenture">
+		<column name="testCenture"/>
+		</property><!-- 映射password属性 -->
+
+
+
+	</class>	
+
+</hibernate-mapping>

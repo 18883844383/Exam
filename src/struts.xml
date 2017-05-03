@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?><!-- XML声明 -->
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd"><!-- 指定Struts 2配置文件的DTD信息 -->
+<struts><!-- 根节点 -->
+	<constant name="struts.i18n.encoding" value="gb2312"></constant>
+	<package name="struts2" extends="struts-default">
+ 		<action name="login" class="com.examsystem.action.LoginAction">
+ 			<result name="studentSuccess" type="redirect">/admin/index.html</result><!--进入考试页面-->
+ 			<result name="teacherSuccess" type="chain">getAllQuestion</result>
+ 			<result name="input">/index.jsp</result><!--登录失败页面-->
+ 		</action> 
+ 		<action name="getAllQuestion" class="com.examsystem.action.getAllQuestion">
+ 			<result name="success">/ManageQuestionTest.jsp</result><!--跳转到考试页面-->
+ 		</action>
+ 		 <action name="addStudent" class="com.examsystem.action.AddStudent">
+ 			<result name="success">/admin/right.html</result><!--进入考试页面-->
+ 			<result name="input">../index.jsp</result><!--登录失败页面-->
+ 		</action>
+ 			 <action name="addQuestionTest" class="com.examsystem.action.AddQuestionTestAction">
+ 			<result name="success"  >/hello.jsp</result><!--进入考试页面-->
+ 			<result name="input">/addTest.jsp</result><!--登录失败页面-->
+ 		</action>
+ 		
+ 			 <action name="addOptionTest" class="com.examsystem.action.AddOptionTestAction">
+ 			<result name="success"  >/hello.jsp</result><!--进入考试页面-->
+ 			<result name="input">/AddOption.jsp</result><!--登录失败页面-->
+ 		</action>
+ 		<action name="questionParticular" class="com.examsystem.action.QuestionParticularAction">
+ 			<result name="success">/showTest.jsp</result><!--跳转到试题详细显示页面-->
+ 		</action>
+ 		<action name="questionUpadateBefore" class="com.examsystem.action.QuestionUpdateBefore">
+ 			<result name="success">/questionUpdate.jsp</result><!--跳转到试题更新页面-->
+ 		</action>
+ 		<action name="questionUpadate" class="com.examsystem.action.QuestionUpdateAction">
+ 			<result name="success">/questionUpdate.jsp</result><!--跳转到试题更新页面-->
+ 		</action>
+ 		
+ 		<action name="questionDelete" class="com.examsystem.action.QuestionDelete">
+ 		<result name="success" type="chain">getAllQuestion</result>
+ 		</action>
+ 		<action name="questionQuery" class="com.examsystem.action.QueryQuestion">
+ 			<result name="success">/ManageQuestionTest.jsp</result><!--跳转到试题列表管理页面-->
+ 		</action>
+ 		<action name="OptionQuery" class="com.examsystem.action.QueryOption">
+ 			<result name="success">/ManageOptionTest.jsp</result><!--跳转到试题列表管理页面-->
+ 		</action>
+ 		 		<action name="optionParticular" class="com.examsystem.action.OptionParticularAction">
+ 			<result name="success">/showOption.jsp</result><!--跳转到试题详细显示页面-->
+ 		</action>
+ 		<action name="optionUpadateBefore" class="com.examsystem.action.OptionUpdateBefore">
+ 			<result name="success">/optionUpdate.jsp</result><!--跳转到试题更新页面-->
+ 		</action>
+ 		<action name="optionUpadate" class="com.examsystem.action.OptionUpdateAction">
+ 			<result name="success">/optionUpdate.jsp</result><!--跳转到试题更新页面-->
+ 		</action>
+ 		<action name="optionDelete" class="com.examsystem.action.OptionDelete">
+ 		<result name="success" type="chain">OptionQuery</result>
+ 		</action>
+ 	</package>	
+</struts>
